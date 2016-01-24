@@ -1,11 +1,11 @@
 ###### QNIBTerminal child
-FROM qnib/terminal
+FROM qnib/terminal:cos7
 
 RUN yum install -y chkconfig
-ENV JAVA_HOME=/opt/jdk1.8.0_60 \
-    JRE_HOME=/opt/jdk1.8.0_60/jre \
-    JAVA_FILE=jdk-8u60-linux-x64.tar.gz \
-    JAVA_DIR=8u60-b27
+ENV JAVA_HOME=/opt/jdk1.8.0_71 \
+    JRE_HOME=/opt/jdk1.8.0_71/jre \
+    JAVA_FILE=jdk-8u71-linux-x64.tar.gz \
+    JAVA_DIR=8u71-b15
 RUN cd /opt/ && \
     wget -q --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
          "http://download.oracle.com/otn-pub/java/jdk/${JAVA_DIR}/${JAVA_FILE}" && \
